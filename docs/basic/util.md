@@ -1,5 +1,6 @@
 ---
 title: 工具函数
+order: 80
 nav:
   title: API
   order: 2
@@ -281,4 +282,4 @@ export default () => {
 
 如果你有任何问题或建议，请随时联系我，微信：
 
-![辰火流光](../wx.png)
+![辰火流光](/open_source/pixiu-number-toolkit/wx.png)
