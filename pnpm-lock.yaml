@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   pixiu-number-toolkit:
-    specifier: ^2.0.2
-    version: 2.0.2
+    specifier: ^2.1.0
+    version: 2.1.0
 
 devDependencies:
   '@commitlint/cli':
@@ -9588,8 +9588,8 @@ packages:
       nice-napi: 1.0.2
     dev: true
 
-  /pixiu-number-toolkit@2.0.2:
-    resolution: {integrity: sha512-/BndjsTgIye5SwvriFjgtcL4zCEo2yFURJtYXVXURxkQMY6AetHmCVjzpwDFuok6zH+Xb9cI77YyOT6jpCCNsw==}
+  /pixiu-number-toolkit@2.1.0:
+    resolution: {integrity: sha512-qGNFA0y35LdKH4oGSfNeTIxtO45DHUyLazxqu3r9knSwUZCcVPLrngSmmAbd8/wFsEQ/vDgSndCuVgECI1ib4Q==}
     dependencies:
       mathjs: 13.0.2
     dev: false
