@@ -32,6 +32,6 @@
     "prettier": "^3.3.2"
   },
   "dependencies": {
-    "pixiu-number-toolkit": "^2.1.0"
+    "pixiu-number-toolkit": "^2.1.1"
   }
 }
