@@ -70,10 +70,6 @@ console.log(result); // 输出: 一亿二千三百四十五万六千七百八十
   export default () => numberToWords(0);
   ```
 
-### 注意事项
-
-- 函数目前只支持到“兆”级别的数字转换。
-
 如果你有任何问题或建议，请随时联系我，微信：
 
 ![辰火流光](/open_source/pixiu-number-toolkit/wx.png)
