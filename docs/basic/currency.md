@@ -21,7 +21,7 @@ import {
   CurrencyCodeType,
   CurrencyStyleType,
   CurrencyUnitType,
-} from '@pixiu-tools/number-toolkit';
+} from '@pixiu-number-toolkit';
 
 // 语法：
 currency(value: number | string | bigint, options: CurrencyOptions)
@@ -128,7 +128,7 @@ const defaultOptions: CurrencyOptions = {
 可以通过 `currency.setGlobalOptions` 方法设置全局默认的格式化选项，影响后续所有调用 `currency` 函数的行为。
 
 ```js
-import { currency, CurrencyCodeType } from '@pixiu-tools/number-toolkit';
+import { currency, CurrencyCodeType } from '@pixiu-number-toolkit';
 currency.setGlobalOptions({
   locale: CurrencyCode.CNY,
   style: 'decimal',
