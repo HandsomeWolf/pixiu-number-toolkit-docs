@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   pixiu-number-toolkit:
-    specifier: ^2.1.1
-    version: 2.1.1
+    specifier: ^2.2.0
+    version: 2.2.0
 
 devDependencies:
   '@commitlint/cli':
@@ -18,7 +18,7 @@ devDependencies:
     version: 19.2.2
   dumi:
     specifier: ^2.4.5
-    version: 2.4.5(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.2)(react-dom@18.3.1)(react@18.3.1)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1)
+    version: 2.4.5(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.3)(react-dom@18.3.1)(react@18.3.1)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1)
   husky:
     specifier: ^9.0.11
     version: 9.0.11
@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^15.2.7
     version: 15.2.7
   prettier:
-    specifier: ^3.3.2
-    version: 3.3.2
+    specifier: ^3.3.3
+    version: 3.3.3
 
 packages:
 
@@ -4825,7 +4825,7 @@ packages:
     resolution: {integrity: sha512-mM6UoGTgTNoo8lA4dwaIwoeSGT+4PeQeiFylr2+kCB5z3/7NEf7lIM4tqrAsEyzecE/HX0+w7Z78hnFZQ9k5vQ==}
     dev: true
 
-  /dumi@2.4.5(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.2)(react-dom@18.3.1)(react@18.3.1)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1):
+  /dumi@2.4.5(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.3)(react-dom@18.3.1)(react@18.3.1)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1):
     resolution: {integrity: sha512-ASMmVIrSbpZXKhqORSGYO4NH40o2MnLrPkWvJe+bJ6gTfpFnTsEkTM63Q+wrekEAGfPbPLRdSitxDqsFPlEuNw==}
     hasBin: true
     peerDependencies:
@@ -4895,7 +4895,7 @@ packages:
       sass: 1.77.6
       sitemap: 7.1.2
       sucrase: 3.35.0
-      umi: 4.3.1(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.2)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1)
+      umi: 4.3.1(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.3)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1)
       unified: 10.1.2
       unist-util-visit: 4.1.2
       unist-util-visit-parents: 5.1.3
@@ -9588,8 +9588,8 @@ packages:
       nice-napi: 1.0.2
     dev: true
 
-  /pixiu-number-toolkit@2.1.1:
-    resolution: {integrity: sha512-nsoIHDFMpvlGGRkCtEBmEmgu6cSE5x2zVcSbPKYSHYZe19RjizUGsL2PNTGqQ10UZadPJT2y2LFZiMroWDK4bA==}
+  /pixiu-number-toolkit@2.2.0:
+    resolution: {integrity: sha512-IbHCpzxernouUAibC0bYmYvUY0rjhC37YjrYJjrzg4VDtMkMBMsqF6zS/ob31SeITw+Sj5LgDAFUIBkxjv/oqg==}
     dependencies:
       mathjs: 13.0.2
     dev: false
@@ -10061,7 +10061,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /prettier-plugin-organize-imports@3.2.4(prettier@3.3.2)(typescript@5.5.3):
+  /prettier-plugin-organize-imports@3.2.4(prettier@3.3.3)(typescript@5.5.3):
     resolution: {integrity: sha512-6m8WBhIp0dfwu0SkgfOxJqh+HpdyfqSSLfKKRZSFbDuEQXDDndb8fTpRWkUrX/uBenkex3MgnVk0J3b3Y5byog==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -10074,11 +10074,11 @@ packages:
       '@volar/vue-typescript':
         optional: true
     dependencies:
-      prettier: 3.3.2
+      prettier: 3.3.3
       typescript: 5.5.3
     dev: true
 
-  /prettier-plugin-packagejson@2.4.3(prettier@3.3.2):
+  /prettier-plugin-packagejson@2.4.3(prettier@3.3.3):
     resolution: {integrity: sha512-kPeeviJiwy0BgOSk7No8NmzzXfW4R9FYWni6ziA5zc1kGVVrKnBzMZdu2TUhI+I7h8/5Htt3vARYOk7KKJTTNQ==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -10086,13 +10086,13 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.3.2
+      prettier: 3.3.3
       sort-package-json: 2.4.1
       synckit: 0.8.5
     dev: true
 
-  /prettier@3.3.2:
-    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -12266,7 +12266,7 @@ packages:
     hasBin: true
     dev: true
 
-  /umi@4.3.1(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.2)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1):
+  /umi@4.3.1(@babel/core@7.24.7)(@types/node@20.14.9)(eslint@8.57.0)(prettier@3.3.3)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)(stylelint@14.16.1)(typescript@5.5.3)(webpack@5.92.1):
     resolution: {integrity: sha512-eMLoRVLlWmATqdrsXjF2xS5OjeIbLsLSRYSq+NY82W39LzAcJIKQyiWT2sFxgED+4W0/XPSd8CGc5pkczlHplQ==}
     engines: {node: '>=14'}
     hasBin: true
@@ -12281,8 +12281,8 @@ packages:
       '@umijs/server': 4.3.1
       '@umijs/test': 4.3.1(@babel/core@7.24.7)
       '@umijs/utils': 4.3.1
-      prettier-plugin-organize-imports: 3.2.4(prettier@3.3.2)(typescript@5.5.3)
-      prettier-plugin-packagejson: 2.4.3(prettier@3.3.2)
+      prettier-plugin-organize-imports: 3.2.4(prettier@3.3.3)(typescript@5.5.3)
+      prettier-plugin-packagejson: 2.4.3(prettier@3.3.3)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/node'
