@@ -178,9 +178,9 @@ nav:
 
 ### 整数、小数信息
 
-`getDecimalInfo`函数能够详细解析一个数字，提取出其小数点的位置、整数和小数部分的具体内容以及各自的长度。
+`parseNumberDetails`函数能够详细解析一个数字，提取出其小数点的位置、整数和小数部分的具体内容以及各自的长度。
 
-#### `getDecimalInfo(value: number, locale?: CurrencyCodeType): DecimalInfo`
+#### `parseNumberDetails(value: number, locale?: CurrencyCodeType): DecimalInfo`
 
 - **参数**
 
@@ -198,7 +198,7 @@ nav:
 #### 使用方法
 
 ```jsx
-import { getDecimalInfo } from 'pixiu-number-toolkit';
+import { parseNumberDetails } from 'pixiu-number-toolkit';
 import { useState, useEffect } from 'react';
 
 export default () => {
@@ -212,7 +212,7 @@ export default () => {
   });
 
   useEffect(() => {
-    setDecimalInfo(getDecimalInfo(-1234.56));
+    setDecimalInfo(parseNumberDetails(-1234.56));
   }, []);
 
   return (
@@ -225,28 +225,6 @@ export default () => {
       <div>　小数部分的值：{decimalInfo.decimalPart}</div>
     </div>
   );
-};
-```
-
-### 小数位数
-
-`getDecimalPlaces` 函数用于快速确定一个数字的小数位数，这对于需要调整数字格式或进行特定精度计算的场景非常有用。
-
-#### `getDecimalPlaces(value: number): number`
-
-- **参数**
-
-  - `value` (`number`) - 输入的数字。
-
-- **返回值** (`number`) - 数字的小数位数。
-
-#### 使用方法
-
-```jsx
-import { getDecimalPlaces } from 'pixiu-number-toolkit';
-
-export default () => {
-  return <div>{getDecimalPlaces(-1234.56)}</div>;
 };
 ```
 
