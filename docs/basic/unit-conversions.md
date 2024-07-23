@@ -70,7 +70,7 @@ console.log(unitConversion(1, 'm', 'cm')); // 输出: 100
   ```jsx
   import { unitConversion } from 'pixiu-number-toolkit';
 
-  export default () => unitConversion(1, 'm2', 'mu');
+  export default () => unitConversion(1, 'm2', 'Mu');
   ```
 
 #### 注意事项

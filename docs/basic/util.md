@@ -241,13 +241,104 @@ export default () => {
 
 - **返回值** (`string`) - 填充后的数字字符串。
 
-### 使用方法
+#### 使用方法
 
 ```jsx
 import { padZero } from 'pixiu-number-toolkit';
 
 export default () => {
   return <div>{padZero(123, 2)}</div>;
+};
+```
+
+创建技术开发文档是为了让开发者能够更好地理解和使用你的代码或库。以下是如何基于你给出的代码片段来撰写相关技术开发文档的示例：
+
+### 区间映射
+
+区间映射实现了左闭右开的半开区间 [start, end)，用于根据数值落入的区间范围返回预定义的值。此工具包含两个主要功能：`createRangeMap`用于构建区间映射表，而`getRangeValue`则用于查询特定数值对应的区间值。
+
+#### 接口定义
+
+```typescript
+// 定义区间类型
+export interface Range {
+  start: number; // 区间开始值
+  end: number; // 区间结束值
+  value: string; // 对应的值
+}
+
+// 定义区间映射类型
+interface RangeMap {
+  breakpoints: number[]; // 区间断点数组
+  values: string[]; // 对应的值数组
+}
+```
+
+#### 功能函数
+
+##### `createRangeMap(ranges: Range[]): RangeMap`
+
+**功能**：接收一个区间数组，按开始值排序后，创建并返回区间映射表。
+
+**参数**：
+
+- `ranges`: `Range[]` - 一个区间数组，每个区间包含开始值、结束值和对应的值。
+
+**返回值**：
+
+- `RangeMap` - 区间映射表，包含`breakpoints`和`values`。
+
+**示例**：
+
+```typescript
+const ranges: Range[] = [
+  { start: 0, end: 100, value: 'A' },
+  { start: 100, end: 200, value: 'B' },
+  { start: 200, end: 300, value: 'C' },
+  { start: 300, end: Infinity, value: 'D' },
+];
+
+const rangeMap = createRangeMap(ranges);
+```
+
+##### `getRangeValue(number: number, rangeMap: RangeMap): string | null`
+
+**功能**：根据给定的数值和区间映射表，返回数值所在的区间对应的值。如果数值不在任何区间内，则返回`null`。
+
+**参数**：
+
+- `number`: `number` - 要查询的数值。
+- `rangeMap`: `RangeMap` - 区间映射表。
+
+**返回值**：
+
+- `string | null` - 如果数值落在某个区间内，返回该区间对应的值；否则返回`null`。
+
+**示例**：
+
+```typescript
+const value = getRangeValue(0, rangeMap); // 返回 'A'
+const value = getRangeValue(100, rangeMap); // 返回 'B'
+const value = getRangeValue(150, rangeMap); // 返回 'B'
+const valueOutOfRange = getRangeValue(-10, rangeMap); // 返回 null
+```
+
+**完整实例**：
+
+```tsx
+import { createRangeMap, getRangeValue, Range } from 'pixiu-number-toolkit';
+
+export default () => {
+  const ranges: Range[] = [
+    { start: 0, end: 100, value: 'A' },
+    { start: 100, end: 200, value: 'B' },
+    { start: 200, end: 300, value: 'C' },
+    { start: 300, end: Infinity, value: 'D' },
+  ];
+
+  const rangeMap = createRangeMap(ranges);
+
+  return <div>{getRangeValue(150, rangeMap)}</div>;
 };
 ```
 

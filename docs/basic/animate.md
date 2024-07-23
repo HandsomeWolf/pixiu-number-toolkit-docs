@@ -65,7 +65,7 @@ const CounterComponent = () => {
   const [currentValue, setCurrentValue] = useState(0);
 
   useEffect(() => {
-    animateNumericCount(0, 1234, 3500, (value) => {
+    animateNumericCount(12.34, 1234, 3500, (value) => {
       setCurrentValue(value);
     });
   }, []);
@@ -75,7 +75,9 @@ const CounterComponent = () => {
       <h1>当前值: {currentValue}</h1>
       <button
         onClick={() =>
-          animateNumericCount(0, 1234, 3500, (value) => setCurrentValue(value))
+          animateNumericCount(1234, -12.34, 3500, (value) =>
+            setCurrentValue(value),
+          )
         }
       >
         重置
@@ -89,7 +91,7 @@ export default CounterComponent;
 
 ```tsx
 import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { RollerNumber } from 'pixiu-number-toolkit/src/animation/rollerNumber'; // 确保路径正确
+import { RollerNumber, computeExpression } from 'pixiu-number-toolkit'; // 确保路径正确
 
 interface RollerNumber {
   initialValue?: number;
@@ -112,38 +114,26 @@ const RollerNumberDemo: React.FC = () => {
         40,
       );
       timer.current = setInterval(() => {
-        newRollerNumber.setValue((count.current += 0.4));
+        // newRollerNumber.setValue((count.current += 0.4));
+        count.current = computeExpression(`${count.current}+${0.4}`, {
+          decimalPlaces: 2,
+        });
+        newRollerNumber.setValue(count.current);
       }, 2000);
     }
   }, []);
 
-  // // 处理值变化
-  // const handleValueChange = useCallback(
-  //   (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     const newValue = parseInt(event.target.value, 10);
-  //     setInputValue(newValue);
-  //     updateRollerNumber(newValue);
-  //   },
-  //   [updateRollerNumber],
-  // );
-
-  // // 处理动画持续时间变化
-  // const handleDurationChange = useCallback(
-  //   (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     const newDuration = parseInt(event.target.value, 10);
-  //     setAnimationDuration(newDuration);
-  //     updateAnimationDuration(newDuration);
-  //   },
-  //   [updateAnimationDuration],
-  // );
-
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px' }}>
-      <h2>RollerNumber Demo</h2>
+      <h2>翻牌器</h2>
       <div style={{ marginBottom: '20px' }}>
         <div
           ref={containerRef}
-          style={{ fontSize: '24px', marginBottom: '10px' }}
+          style={{
+            fontSize: '24px',
+            marginBottom: '10px',
+            textAlign: 'center',
+          }}
         />
       </div>
     </div>
